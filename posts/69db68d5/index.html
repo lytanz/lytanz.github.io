@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"lytanz.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="基础软件安装wps#安装wps 1yay -S wps-office-cn  #安装中文环境 1yay -S wps-office-mui-zh-cn  #安装字体 1yay -S  ttf-wps-fonts  深度工具#深度截图##需要自己添加快捷键才能使用 #路径：系统设置&#x3D;&gt;快捷键&#x3D;&gt;添加应用程序 1sudo pacman -S deepin-screenshot   #录屏软">
+  <meta name="description" content="linux系统的一些基础软件的安装和编程环境的搭建。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="manjaro工具安装">
 <meta property="og:url" content="https://lytanz.github.io/posts/69db68d5/index.html">
 <meta property="og:site_name" content="探长ds">
-<meta property="og:description" content="基础软件安装wps#安装wps 1yay -S wps-office-cn  #安装中文环境 1yay -S wps-office-mui-zh-cn  #安装字体 1yay -S  ttf-wps-fonts  深度工具#深度截图##需要自己添加快捷键才能使用 #路径：系统设置&#x3D;&gt;快捷键&#x3D;&gt;添加应用程序 1sudo pacman -S deepin-screenshot   #录屏软">
+<meta property="og:description" content="linux系统的一些基础软件的安装和编程环境的搭建。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-21T11:36:01.000Z">
-<meta property="article:modified_time" content="2021-09-25T16:19:52.069Z">
+<meta property="article:modified_time" content="2021-09-26T06:05:41.404Z">
 <meta property="article:author" content="探长ds">
 <meta property="article:tag" content="manjaro">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-26 00:19:52" itemprop="dateModified" datetime="2021-09-26T00:19:52+08:00">2021-09-26</time>
+                <time title="修改时间：2021-09-26 14:05:41" itemprop="dateModified" datetime="2021-09-26T14:05:41+08:00">2021-09-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,27 +223,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="基础软件安装"><a href="#基础软件安装" class="headerlink" title="基础软件安装"></a>基础软件安装</h1><h2 id="wps"><a href="#wps" class="headerlink" title="wps"></a>wps</h2><p>#安装wps</p>
+        <p>linux系统的一些基础软件的安装和编程环境的搭建。</p>
+<span id="more"></span>
+
+<h1 id="基础软件安装"><a href="#基础软件安装" class="headerlink" title="基础软件安装"></a>基础软件安装</h1><h2 id="办公软件"><a href="#办公软件" class="headerlink" title="办公软件"></a>办公软件</h2><p>#LibreOffice（推荐）</p>
+<p>选择fresh版</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S libreoffice</span><br></pre></td></tr></table></figure>
+
+<p>#<del>wps</del>（对触摸板试配不友好）</p>
+<p><del>安装wps</del></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-cn</span><br></pre></td></tr></table></figure>
 
-<p>#安装中文环境</p>
+<p><del>#安装中文环境</del></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-mui-zh-cn</span><br></pre></td></tr></table></figure>
 
-<p>#安装字体</p>
+<p><del>#安装字体</del></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S  ttf-wps-fonts</span><br></pre></td></tr></table></figure>
 
 <h2 id="深度工具"><a href="#深度工具" class="headerlink" title="深度工具"></a>深度工具</h2><p>#深度截图##需要自己添加快捷键才能使用</p>
 <p>#路径：系统设置=&gt;快捷键=&gt;添加应用程序</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S deepin-screenshot </span><br></pre></td></tr></table></figure>
 
-<p>#录屏软件，可以录制 Gif 或者 MP4 格式</p>
+<p><del>#录屏软件，可以录制 Gif 或者 MP4 格式</del>（与screenshot冲突）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S deepin-screen-recorder #还不会使用</span><br></pre></td></tr></table></figure>
 
-<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S netease-cloud-music</span><br></pre></td></tr></table></figure>
+<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>#没怎么用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S netease-cloud-music</span><br></pre></td></tr></table></figure>
 
 <h2 id="google浏览器"><a href="#google浏览器" class="headerlink" title="google浏览器"></a>google浏览器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome</span><br></pre></td></tr></table></figure>
 
-<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S typora</span><br></pre></td></tr></table></figure>
+<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p>#结合hexo搭建的博客一起使用很不错</p>
+<p>写markdown文档</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S typora</span><br></pre></td></tr></table></figure>
 
 <h2 id="unzip"><a href="#unzip" class="headerlink" title="unzip"></a>unzip</h2><p>#解压缩工具，防止乱码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S unzip-iconv</span><br></pre></td></tr></table></figure>
@@ -256,10 +267,12 @@
 <p>#安装gdb调试工具</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S gdb</span><br></pre></td></tr></table></figure>
 
-<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S gvim</span><br></pre></td></tr></table></figure>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S vim</span><br></pre></td></tr></table></figure>
 
-<p>配置方面暂时还没进行</p>
-<h2 id="java环境"><a href="#java环境" class="headerlink" title="java环境"></a>java环境</h2><p>#先去JDK官网下载Linux Compressed Archive版<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java11">JDK11( LTS)</a></p>
+<p>#对vim进行基础配置</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lzyws739307453/p/12907589.html">vim配置</a></p>
+<h2 id="java环境"><a href="#java环境" class="headerlink" title="java环境"></a>java环境</h2><p>#压缩包安装</p>
+<p>#先去JDK官网下载Linux Compressed Archive版<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java11">JDK11( LTS)</a></p>
 <p>下载完成后解压之后，将文件移动到 /opt目录下面</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  mv jdk-11.0.12  /opt/</span><br></pre></td></tr></table></figure>
 
@@ -297,7 +310,7 @@
 <p>#16pro破解密钥</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ZF3R0-FHED2-M80TY-8QYGC-NPKYF</span><br><span class="line">YF390-0HF8P-M81RQ-2DXQE-M2UT6</span><br><span class="line">ZF71R-DMX85-08DQY-8YMNC-PPHV8</span><br></pre></td></tr></table></figure>
 
-<p>##还需要写服务文件</p>
+<p>##依赖自启动服务<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/VMware_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">arch wIKI教程</a></p>
 <h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S visual-studio-code-bin</span><br></pre></td></tr></table></figure>
 
 <p>#vsc搭建c/c++变成环境</p>
@@ -439,7 +452,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">基础软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wps"><span class="nav-number">1.1.</span> <span class="nav-text">wps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">深度工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">1.3.</span> <span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#google%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">google浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.5.</span> <span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unzip"><span class="nav-number">1.6.</span> <span class="nav-text">unzip</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">编程环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">基础编程环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">2.2.</span> <span class="nav-text">vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%8E%AF%E5%A2%83"><span class="nav-number">2.3.</span> <span class="nav-text">java环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware"><span class="nav-number">2.4.</span> <span class="nav-text">VMware</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VSCode"><span class="nav-number">2.5.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda"><span class="nav-number">2.6.</span> <span class="nav-text">anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9jupyter%E7%9A%84%E9%BB%98%E8%AE%A4%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.6.1.</span> <span class="nav-text">修改jupyter的默认工作路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker"><span class="nav-number">2.7.</span> <span class="nav-text">docker</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">后记：</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">基础软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">办公软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">深度工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">1.3.</span> <span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#google%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">google浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.5.</span> <span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unzip"><span class="nav-number">1.6.</span> <span class="nav-text">unzip</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">编程环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">基础编程环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">2.2.</span> <span class="nav-text">vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E7%8E%AF%E5%A2%83"><span class="nav-number">2.3.</span> <span class="nav-text">java环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware"><span class="nav-number">2.4.</span> <span class="nav-text">VMware</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VSCode"><span class="nav-number">2.5.</span> <span class="nav-text">VSCode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda"><span class="nav-number">2.6.</span> <span class="nav-text">anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9jupyter%E7%9A%84%E9%BB%98%E8%AE%A4%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.6.1.</span> <span class="nav-text">修改jupyter的默认工作路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker"><span class="nav-number">2.7.</span> <span class="nav-text">docker</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">后记：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
