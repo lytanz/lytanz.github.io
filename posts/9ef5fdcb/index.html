@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lytanz.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="基础来源 普通模式插入： a：在光标后 A：在行尾 i：在光标前 I：在行首 o：在下一行 O：在上一行 删除： x：删除光标所在的字符 dd：删除光标所在行 d0：行首到光标所在位置 d$：行尾到光标所在位置 cw、cW：删除光标所在位置到单词结束位置，并进入插入 cb、cB：删除光标所在位置到单词开始位置，并进入插入 dw、dW：删除光标所在位置到单词结束位置，不进入插入 db、dB：删除光标">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim练习">
+<meta property="og:url" content="https://lytanz.github.io/posts/9ef5fdcb/index.html">
+<meta property="og:site_name" content="探长ds">
+<meta property="og:description" content="基础来源 普通模式插入： a：在光标后 A：在行尾 i：在光标前 I：在行首 o：在下一行 O：在上一行 删除： x：删除光标所在的字符 dd：删除光标所在行 d0：行首到光标所在位置 d$：行尾到光标所在位置 cw、cW：删除光标所在位置到单词结束位置，并进入插入 cb、cB：删除光标所在位置到单词开始位置，并进入插入 dw、dW：删除光标所在位置到单词结束位置，不进入插入 db、dB：删除光标">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-28T09:49:24.000Z">
+<meta property="article:modified_time" content="2021-09-28T11:04:13.359Z">
+<meta property="article:author" content="探长ds">
+<meta property="article:tag" content="vim">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lytanz.github.io/posts/9ef5fdcb/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>vim练习 | 探长ds</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">探长ds</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lytanz.github.io/posts/9ef5fdcb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="探长ds">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探长ds">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vim练习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-28 17:49:24 / 修改时间：19:04:13" itemprop="dateCreated datePublished" datetime="2021-09-28T17:49:24+08:00">2021-09-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p><a target="_blank" rel="noopener" href="https://vimjc.com/vim-cursor.html">来源</a></p>
+<h2 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h2><p>插入：</p>
+<p>a：在光标后</p>
+<p>A：在行尾</p>
+<p>i：在光标前</p>
+<p>I：在行首</p>
+<p>o：在下一行</p>
+<p>O：在上一行</p>
+<p>删除：</p>
+<p>x：删除光标所在的字符</p>
+<p>dd：删除光标所在行</p>
+<p>d0：行首到光标所在位置</p>
+<p>d$：行尾到光标所在位置</p>
+<p>cw、cW：删除光标所在位置到单词结束位置，并进入插入</p>
+<p>cb、cB：删除光标所在位置到单词开始位置，并进入插入</p>
+<p>dw、dW：删除光标所在位置到单词结束位置，不进入插入</p>
+<p>db、dB：删除光标所在位置到单词开始位置，不进入插入</p>
+<p>d)：删除光标位置到句尾位置</p>
+<p>d(：删除光标所在位置到句首位置</p>
+<p>d}：删除到段尾</p>
+<p>d{：删除到段首</p>
+<p>复制粘贴：</p>
+<p>yw：复制光标所在位置到词尾</p>
+<p>yy：复杂当前行</p>
+<p>p：将最后一次删除或复制的内容粘贴到光标所在位置之后</p>
+<p>P：将最后一次删除或复制的内容粘贴到光标所在位置之前</p>
+<p>替换：</p>
+<p>r：替换一次光标所在字符</p>
+<p>R：连续替换</p>
+<p>10dd：删除10行</p>
+<p>d3w：删除三个单词</p>
+<p>撤销：</p>
+<p>u</p>
+<p>ctrl+r：反撤销</p>
+<p>另存为：</p>
+<p>：write a.txt</p>
+<p>：saveas b.txt 或 sav b.txt</p>
+<p>ctrl+g显示文件名和行数</p>
+<h2 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h2><h4 id="2-1-左、上、下、右移动"><a href="#2-1-左、上、下、右移动" class="headerlink" title="2.1 左、上、下、右移动"></a>2.1 左、上、下、右移动</h4><p><code>h </code> <code>j</code> <code>k</code>  <code>l</code></p>
+<h4 id="2-2-行级移动"><a href="#2-2-行级移动" class="headerlink" title="2.2 行级移动"></a>2.2 行级移动</h4><p><code>0</code>     移动光标到当前行<strong>行首</strong><br><code>$</code>     移动光标到当前行<strong>行尾</strong><br><code>^</code>     移动光标到当前行的第一个非空字符<br><code>nG</code>    移动光标到当前文件的第n行<br><code>:n</code>    移动光标到当前文件的第n行 (同上)</p>
+<h4 id="2-3-文件首尾移动"><a href="#2-3-文件首尾移动" class="headerlink" title="2.3 文件首尾移动"></a>2.3 文件首尾移动</h4><p><code>gg</code> 或 <code>:0</code>    移动光标到当前文件的第一行<br><code>GG</code> 或 <code>:$</code>    移动光标到当前未经的最后一行</p>
+<h4 id="2-4-单词级移动"><a href="#2-4-单词级移动" class="headerlink" title="2.4 单词级移动"></a>2.4 单词级移动</h4><p><code>w</code> 或 <code>W</code>     移动到下一单词的开头<br><code>b</code> 或 <code>B</code>     移动到上一单词的开头<br><code>e</code> 或 <code>E</code>     移动到光标所在单词的末尾</p>
+<h4 id="2-5-匹配单词级移动"><a href="#2-5-匹配单词级移动" class="headerlink" title="2.5 匹配单词级移动"></a>2.5 匹配单词级移动</h4><p><code>*</code>    移动光标到<strong>匹配</strong>光标当前所在单词的<strong>下</strong>一个单词<br><code>#</code>    移动光标到<strong>匹配</strong>光标当前所在单词的<strong>上</strong>一个单词</p>
+<h4 id="2-6-匹配括号移动"><a href="#2-6-匹配括号移动" class="headerlink" title="2.6 匹配括号移动"></a>2.6 匹配括号移动</h4><p><code>%</code>    移动光标到括号左半部分( 包括**(<strong>、</strong>{<strong>、</strong>[** )对应右半匹配部分( <strong>)<strong>、</strong>}<strong>、</strong>]</strong> )</p>
+<h4 id="2-7-段落级移动"><a href="#2-7-段落级移动" class="headerlink" title="2.7 段落级移动"></a>2.7 段落级移动</h4><p><code>&#125;</code>    移动光标到当前段落的末尾<br><code>&#123;</code>    移到光标到当前段落的开头</p>
+<h4 id="2-8-屏幕级移动"><a href="#2-8-屏幕级移动" class="headerlink" title="2.8 屏幕级移动"></a>2.8 屏幕级移动</h4><p><code>H</code>    移动光标到屏幕的第一行<br><code>M</code>    移动光标到屏幕的中间一行<br><code>L</code>    移动光标到屏幕的最后一行 </p>
+<h4 id="2-9-翻页"><a href="#2-9-翻页" class="headerlink" title="2.9 翻页"></a>2.9 翻页</h4><p><code>Ctrl + f</code>    向前滚动一页<br><code>Ctrl + b</code>    向后滚动一页</p>
+<p><code>Ctrl + u</code>    向前滚动半页<br><code>Ctrl + d</code>    向后滚动半页 </p>
+<p>.重复上次操作</p>
+<ol start="5">
+<li>  重复5次</li>
+</ol>
+<h2 id="Vim可视化模式介绍"><a href="#Vim可视化模式介绍" class="headerlink" title="Vim可视化模式介绍"></a>Vim可视化模式介绍</h2><p>输入 <code>v</code> 或者 <code>V</code> 或者 <code>Ctrl + v</code> 都可进入可视化模式，这三个Vim可视化模式的主要区别在于：</p>
+<p>字符选择模式: 选中光标经过的所有<strong>字符</strong>，普通模式下按 <code>v</code> 进入<br>行选择模式：选中光标经过的所有<strong>行</strong>，普通模式下按 <code>V</code> 进入<br>块选择模式：选中一整个矩形框表示的所有文本，普通模式下按 <code>&lt;Ctrl&gt; + v</code> 进入</p>
+<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><p><a target="_blank" rel="noopener" href="https://vimjc.com/vim-search.html">https://vimjc.com/vim-search.html</a></p>
+<h1 id="换主题"><a href="#换主题" class="headerlink" title="换主题"></a>换主题</h1><p><a target="_blank" rel="noopener" href="https://vimjc.com/vim-color-schemes.html">https://vimjc.com/vim-color-schemes.html</a></p>
+<p>主题地址</p>
+<p><a target="_blank" rel="noopener" href="https://hub.fastgit.org/morhetz/gruvbox">https://hub.fastgit.org/morhetz/gruvbox</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(1) 确认当前用户目录下存在~/.vim/colors目录，没有则新建，安装的Vim配色方案对应.vim文件需放在该目录下</span><br><span class="line">(2) 下载或编辑某个配色方案的.vim文件，保存到~/.vim/colors目录下</span><br><span class="line">(3) 修改Vim配置文件~/.vimrc，增加配置项colorscheme molokai并保存 </span><br><span class="line">(假设下载了一个叫molokai的配色方案文件molokai.vim)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vim/" rel="tag"># vim</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/dba3bb35/" rel="prev" title="vim配置">
+      <i class="fa fa-chevron-left"></i> vim配置
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">普通模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.</span> <span class="nav-text">光标移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E5%B7%A6%E3%80%81%E4%B8%8A%E3%80%81%E4%B8%8B%E3%80%81%E5%8F%B3%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">2.1 左、上、下、右移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E8%A1%8C%E7%BA%A7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2.2 行级移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%96%87%E4%BB%B6%E9%A6%96%E5%B0%BE%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">2.3 文件首尾移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E5%8D%95%E8%AF%8D%E7%BA%A7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">2.4 单词级移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-%E5%8C%B9%E9%85%8D%E5%8D%95%E8%AF%8D%E7%BA%A7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">2.5 匹配单词级移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-%E5%8C%B9%E9%85%8D%E6%8B%AC%E5%8F%B7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">2.6 匹配括号移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-%E6%AE%B5%E8%90%BD%E7%BA%A7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">2.7 段落级移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-8-%E5%B1%8F%E5%B9%95%E7%BA%A7%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.2.0.8.</span> <span class="nav-text">2.8 屏幕级移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-%E7%BF%BB%E9%A1%B5"><span class="nav-number">1.2.0.9.</span> <span class="nav-text">2.9 翻页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vim%E5%8F%AF%E8%A7%86%E5%8C%96%E6%A8%A1%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.3.</span> <span class="nav-text">Vim可视化模式介绍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-number">2.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">换主题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">探长ds</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">探长ds</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
