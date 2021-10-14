@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>常见问题的整理</title>
-      <link href="/posts/9cf4099a/"/>
-      <url>/posts/9cf4099a/</url>
+      <title>常见问题整理</title>
+      <link href="/posts/4648cbab/"/>
+      <url>/posts/4648cbab/</url>
       
         <content type="html"><![CDATA[<p>对遇到的一些问题，给出了一些解决方案，然后将它们整理到了一起</p><span id="more"></span><h1 id="1-python将自定义模块加入搜索路径"><a href="#1-python将自定义模块加入搜索路径" class="headerlink" title="1 python将自定义模块加入搜索路径"></a>1 python将自定义模块加入搜索路径</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">新建一个.pth文件，将模块路径写入这个文件，然后将这个文件加入到python已有的搜索路径中去</span><br></pre></td></tr></table></figure><h1 id="2-系统环境变量的设置"><a href="#2-系统环境变量的设置" class="headerlink" title="2 系统环境变量的设置"></a>2 系统环境变量的设置</h1><ul><li>系统环境配置文件<code>/etc/profile</code></li><li>用户环境变量<code>~/.bash_profile</code></li></ul><blockquote><p>  <a href="https://cloud.tencent.com/developer/article/1372009?from=14588">https://cloud.tencent.com/developer/article/1372009?from=14588</a></p><p>  <a href="https://www.linuxidc.com/Linux/2011-03/33197.htm">https://www.linuxidc.com/Linux/2011-03/33197.htm</a></p></blockquote><h1 id="3-文件默认打开方式设置"><a href="#3-文件默认打开方式设置" class="headerlink" title="3 文件默认打开方式设置"></a>3 文件默认打开方式设置</h1><h1 id="4-github访问慢"><a href="#4-github访问慢" class="headerlink" title="4 github访问慢"></a>4 github访问慢</h1><p>解决办法：修改hosts文件，不进行DNS域名解析，直接手动将域名指向IP</p><p>打开 <a href="https://www.ipaddress.com/">https://www.ipaddress.com/</a> 查询以下四个域名的IP地址，获取GitHub官方CDN地址</p><ul><li><p>  github.com</p></li><li><p>  assets-cdn.github.com</p></li><li><p>  github.global.ssl.fastly.net</p></li><li><p>  codeload.github.com</p></li></ul><p>#修改系统Hosts文件<code>/etc/hosts</code> ，在后面添加下面三行，其中IP地址是你查询到的ip地址</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">140.82.113.3    github.com</span><br><span class="line">185.199.108.153 assets-cdn.github.com</span><br><span class="line">199.232.69.194  github.global.ssl.fastly.net</span><br><span class="line">140.82.113.10  codeload.github.com</span><br></pre></td></tr></table></figure><h1 id="5-Stack-Overflow访问慢"><a href="#5-Stack-Overflow访问慢" class="headerlink" title="5 Stack Overflow访问慢"></a>5 Stack Overflow访问慢</h1><p><a href="https://blog.csdn.net/whp1473/article/details/85055359?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242">原因</a></p><p>解决：修改hosts，<code>sudo vim /etc/hosts</code></p><p>添加：<code>127.0.0.1   ajax.googleapis.com</code></p><h1 id="6-火狐设置"><a href="#6-火狐设置" class="headerlink" title="6 火狐设置"></a>6 火狐设置</h1><p>#怎么关闭最后的一个标签页也不退出火狐？</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在地址栏输入：about:config</span><br><span class="line">将browser.tabs.closeWindowWithLastTab改为false</span><br></pre></td></tr></table></figure>]]></content>
       
@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> 问题 </tag>
+            <tag> F&amp;Q </tag>
             
         </tags>
       
