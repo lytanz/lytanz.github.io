@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s3.bmp.ovh/imgs/2021/09/02f97b5c992e7257.png">
 <meta property="article:published_time" content="2021-09-21T08:48:12.000Z">
-<meta property="article:modified_time" content="2021-10-14T14:06:19.961Z">
+<meta property="article:modified_time" content="2021-10-15T12:59:10.790Z">
 <meta property="article:author" content="探长ds">
 <meta property="article:tag" content="manjaro">
 <meta name="twitter:card" content="summary">
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-14 22:06:19" itemprop="dateModified" datetime="2021-10-14T22:06:19+08:00">2021-10-14</time>
+                <time title="修改时间：2021-10-15 20:59:10" itemprop="dateModified" datetime="2021-10-15T20:59:10+08:00">2021-10-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -279,8 +279,8 @@
 </tr>
 </tbody></table>
 <p>因为装的软件的配置文件一般都保存在/home目录下，所以home目录的空间耗费的快很多，需要把大部分的空间给/home目录；之前我给根目录/200G,发现根本用不完。</p>
-<h1 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h1><p> 安装完成之后重启进入系统</p>
-<h2 id="pacman仓库换源"><a href="#pacman仓库换源" class="headerlink" title="pacman仓库换源"></a>pacman仓库换源</h2><p>#选择最快的一个</p>
+<h1 id="一、基础配置"><a href="#一、基础配置" class="headerlink" title="一、基础配置"></a>一、基础配置</h1><p> 安装完成之后重启进入系统</p>
+<h2 id="1-pacman仓库换源"><a href="#1-pacman仓库换源" class="headerlink" title="1. pacman仓库换源"></a>1. pacman仓库换源</h2><p>#选择最快的一个</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br></pre></td></tr></table></figure>
 
 <p>#修改pacman.conf添加archlinux仓库源</p>
@@ -301,7 +301,7 @@
 <p>#配置 yay 的 aur 源为清华源 AUR 镜像：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay --aururl &quot;https://aur.tuna.tsinghua.edu.cn&quot; --save</span><br></pre></td></tr></table></figure>
 
-<h2 id="yay-和-pacman"><a href="#yay-和-pacman" class="headerlink" title="yay 和 pacman"></a>yay 和 pacman</h2><p>包管理器</p>
+<h2 id="2-yay-和-pacman"><a href="#2-yay-和-pacman" class="headerlink" title="2. yay 和 pacman"></a>2. yay 和 pacman</h2><p>包管理器</p>
 <p>#常用命令</p>
 <p>#pacman</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S 软件名　# 安装</span><br><span class="line">sudo pacman -Rs 软件名 # 除指定软件包，及其所有没有被其他已安装软件包使用的依赖关系</span><br><span class="line">sudo pacman -Syu　# 升级所有软件包</span><br></pre></td></tr></table></figure>
@@ -309,16 +309,15 @@
 <p>#yay</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yay -S package # 从 AUR 安装软件包</span><br><span class="line">yay -Rns package # 删除包---经常用^_^</span><br><span class="line">yay -Syu # 升级所有已安装的包</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装中文输入法"><a href="#安装中文输入法" class="headerlink" title="安装中文输入法"></a>安装中文输入法</h2><p>#基于fcitx5框架安装</p>
+<h2 id="3-安装输入法"><a href="#3-安装输入法" class="headerlink" title="3. 安装输入法"></a>3. 安装输入法</h2><p>#基于fcitx5框架安装</p>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">arch Wiki教程</a></p>
 </blockquote>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://github.com/fkxxyz/rime-cloverpinyin/wiki/linux#%E5%9F%BA%E4%BA%8Efcitx5">另一种方案</a></p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5 fcitx5-chinese-addons</span><br></pre></td></tr></table></figure>
+<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="- 安装依赖"></a>- 安装依赖</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool</span><br></pre></td></tr></table></figure>
+<h3 id="安装中文输入法"><a href="#安装中文输入法" class="headerlink" title="- 安装中文输入法"></a>- 安装中文输入法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5 fcitx5-chinese-addons</span><br></pre></td></tr></table></figure>
 
 <p>#在 ~/.xprofile 写入</p>
 <p>sudo nano ~/.xprofile</p>
@@ -339,12 +338,16 @@
 <p>##安装完后在fcitx5设置里面能看到已经自动添加了</p>
 <p>#配置文件</p>
 <p><code>~/.config/fcitx5/conf/classicui.conf</code></p>
-<p>#主题</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="- 更换主题"></a>- 更换主题</h3><p>#1 Nord主题</p>
+<blockquote>
+<p>  <a target="_blank" rel="noopener" href="https://hub.fastgit.org/tonyfettes/fcitx5-nord">项目地址</a></p>
+</blockquote>
+<p>#2 material-color</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx5-material-color</span><br></pre></td></tr></table></figure>
 
 <p>#换主题的操作，请参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">arch wiki</a></p>
 <p>其实到这一步，系统基本能用了</p>
-<h1 id="manjaro美化"><a href="#manjaro美化" class="headerlink" title="manjaro美化"></a>manjaro美化</h1><h2 id="shell美化"><a href="#shell美化" class="headerlink" title="shell美化"></a>shell美化</h2><p>#先查看系统是否有zsh</p>
+<h1 id="二、manjaro美化"><a href="#二、manjaro美化" class="headerlink" title="二、manjaro美化"></a>二、manjaro美化</h1><h2 id="1-shell美化"><a href="#1-shell美化" class="headerlink" title="1. shell美化"></a>1. shell美化</h2><p>#先查看系统是否有zsh</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
 
 <p>##若没有，先安装zsh</p>
@@ -371,8 +374,7 @@
 <p>##使修改生效</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
 
-<p>#主题配置</p>
-<p>vim ~/.zshrc</p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="- 主题配置"></a>- 主题配置</h3><p>vim ~/.zshrc</p>
 <p>##将ZSH_THEME改为下面的值</p>
 <p>##每次打开一个终端随机生成一个主题</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;random&quot;</span><br></pre></td></tr></table></figure>
@@ -380,7 +382,12 @@
 <p>##也可以去官网下载一个主题<a target="_blank" rel="noopener" href="https://hub.fastgit.org/ohmyzsh/ohmyzsh/wiki/Themes">oh-my-zsh主题</a></p>
 <p>主题推荐：</p>
 <ul>
-<li>  xiong-chiamiov-plus</li>
+<li><p>  mlh 红蓝黄三种颜色</p>
+</li>
+<li><p>  xiong-chiamiov-plus</p>
+</li>
+<li><p>  xiong-chiamiov</p>
+</li>
 </ul>
 <p>然后修改ZSH_THEME</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;主题名&quot;</span><br></pre></td></tr></table></figure>
@@ -389,7 +396,7 @@
 <p>ctrl+alt+T快速打开一个终端</p>
 <p>#点设置=&gt;配置方案=新建</p>
 <p>#外观=&gt;编辑=&gt;背景透明度</p>
-<h3 id="显示系统信息"><a href="#显示系统信息" class="headerlink" title="显示系统信息"></a>显示系统信息</h3><p>#软件screenfetch</p>
+<h2 id="2-显示系统信息"><a href="#2-显示系统信息" class="headerlink" title="2. 显示系统信息"></a>2. 显示系统信息</h2><p>#软件screenfetch</p>
 <p>##安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S screenfetch</span><br></pre></td></tr></table></figure>
 
@@ -420,7 +427,7 @@
 <p>##使用方法</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screenfetch | lolcat </span><br></pre></td></tr></table></figure>
 
-<h2 id="桌面美化"><a href="#桌面美化" class="headerlink" title="桌面美化"></a>桌面美化</h2><p>#外观设置</p>
+<h2 id="3-桌面美化"><a href="#3-桌面美化" class="headerlink" title="3. 桌面美化"></a>3. 桌面美化</h2><p>#外观设置</p>
 <p>窗口装饰元素安装vimix-kde手动安装</p>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://github.com.cnpmjs.org/vinceliuice/vimix-kde/tree/master/plasma">https://github.com.cnpmjs.org/vinceliuice/vimix-kde/tree/master/plasma</a></p>
@@ -453,7 +460,7 @@
 <li>  窗口背景虚化</li>
 <li>  最小化过度动画（神灯）</li>
 </ul>
-<h2 id="dock应用栏"><a href="#dock应用栏" class="headerlink" title="dock应用栏"></a>dock应用栏</h2><p>#将默认面板移动到桌面顶端</p>
+<h2 id="3-dock应用栏"><a href="#3-dock应用栏" class="headerlink" title="3. dock应用栏"></a>3. dock应用栏</h2><p>#将默认面板移动到桌面顶端</p>
 <p>右击默认面板，编辑面板，然后进行拖动</p>
 <p>安装dock</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S latte-dock</span><br></pre></td></tr></table></figure>
@@ -547,7 +554,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">桌面展示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85majaro"><span class="nav-number">2.</span> <span class="nav-text">安装majaro</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">2.1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88"><span class="nav-number">2.2.</span> <span class="nav-text">分区方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pacman%E4%BB%93%E5%BA%93%E6%8D%A2%E6%BA%90"><span class="nav-number">3.1.</span> <span class="nav-text">pacman仓库换源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#yay-%E5%92%8C-pacman"><span class="nav-number">3.2.</span> <span class="nav-text">yay 和 pacman</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">安装中文输入法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#manjaro%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">manjaro美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell%E7%BE%8E%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">shell美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="nav-number">4.1.1.</span> <span class="nav-text">显示系统信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">桌面美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dock%E5%BA%94%E7%94%A8%E6%A0%8F"><span class="nav-number">4.3.</span> <span class="nav-text">dock应用栏</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">软件安装</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">桌面展示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85majaro"><span class="nav-number">2.</span> <span class="nav-text">安装majaro</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">2.1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88"><span class="nav-number">2.2.</span> <span class="nav-text">分区方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">一、基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-pacman%E4%BB%93%E5%BA%93%E6%8D%A2%E6%BA%90"><span class="nav-number">3.1.</span> <span class="nav-text">1. pacman仓库换源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-yay-%E5%92%8C-pacman"><span class="nav-number">3.2.</span> <span class="nav-text">2. yay 和 pacman</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">3. 安装输入法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">3.3.1.</span> <span class="nav-text">- 安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-number">3.3.2.</span> <span class="nav-text">- 安装中文输入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">3.3.3.</span> <span class="nav-text">- 更换主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81manjaro%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">二、manjaro美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-shell%E7%BE%8E%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">1. shell美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">4.1.1.</span> <span class="nav-text">- 主题配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%98%BE%E7%A4%BA%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="nav-number">4.2.</span> <span class="nav-text">2. 显示系统信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96"><span class="nav-number">4.3.</span> <span class="nav-text">3. 桌面美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-dock%E5%BA%94%E7%94%A8%E6%A0%8F"><span class="nav-number">4.4.</span> <span class="nav-text">3. dock应用栏</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">软件安装</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
