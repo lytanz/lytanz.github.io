@@ -45,7 +45,7 @@
     }
   },
   isPhotoFigcaption: false,
-  islazyload: false,
+  islazyload: true,
   isanchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '探长的个人博客',
@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-10-26 23:53:22'
+  postUpdate: '2021-11-09 11:07:49'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,164 +142,221 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.ico" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 站点链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/20211026535.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">探长的个人博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 站点链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">探长的个人博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/23/linux%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="linux配置文件">linux配置文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-23T09:10:55.000Z" title="发表于 2021-09-23 17:10:55">2021-09-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a></span></div><div class="content">前言
-linux系统中，一些应用的配置文件及其路径
-
-
-vim的配置文件：用户配置文件~/.vimrc，系统配置文件/etc/vimrc
-环境变量#系统环境变量/etc/profile
-配置完成后source /etc/profile使配置文件立即生效
-#用户环境变量：
-由shell决定
-
-  bash 用户：~/.bash_profile  
-
-  zsh：～/.zshrc
-
-
-sshssh 的公钥私钥保存位置~/.ssh
-配置文件：/etc/ssh/sshd_config
-启动挂载/etc/fstab及/etc/mtab
-用户帐号和密码/etc/passwd
-/etc/group
-/etc/shadow
-useradd默认值：/etc/default/useradd
-UID/GID密码参数：/etc/login.defs
-用户的默认mailbox：/var/spool/mail
-sudo/etc/sudoers 使用visudo修改
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/21/manjaro%E9%97%AE%E9%A2%98%E9%9B%86/" title="manjaro问题集">manjaro问题集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-21T14:23:59.000Z" title="发表于 2021-09-21 22:23:59">2021-09-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/manjaro/">manjaro</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/manjaro/">manjaro</a></span></div><div class="content">1安装manjaro过程中出现的一些问题，以及使用过程中出现的一些问题。
-
-
-火狐设置#怎么关闭最后的一个标签页也不退出火狐？
-12在地址栏输入：about:config将browser.tabs.closeWindowWithLastTab改为false
-
-manjaro社区
-压缩包解压乱码问题#问题：window下的压缩包文件迁移到linux下，解压后，文件名乱码
-
-  arch wiki
-  避免方法：非 utf8 编码环境下（一般 windows 下的中文环境即是）    不使用 zip 进行压缩（建议使用 7z)。 解决方案：安装使用 unzip-iconvAUR 或者 unzip-natspecAUR 取代原版的 unzip 来解压缩，示例：
-
-##先安装 unzip-iconv
-1yay -S unzip-iconv
-
-##解压操作
-1unzip -O gbk file.zip
-
-#批量解压文件
-123unzip &#x27;*.zip&#x27;或者unzip &quot;*.zip&quot;
-
-manjaro 无效或已损坏的软件包 (PGP 签名)#问题：在 使用y ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/21/manjaro%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" title="manjaro软件安装">manjaro软件安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-21T11:36:01.000Z" title="发表于 2021-09-21 19:36:01">2021-09-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/manjaro/">manjaro</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/manjaro/">manjaro</a></span></div><div class="content">linux系统的一些基础软件的安装和编程环境的搭建。
-
-
-常用软件安装办公软件#LibreOffice（推荐）
-选择fresh版
-1yay -S libreoffice
-
-#安装中文语言包
-在软件商店搜索libreoffice-still-zh-cn
-安装wps安装yay -S wps-office-cn 
-#安装中文环境yay -S wps-office-mui-zh-cn#安装字体 yay -S  ttf-wps-fonts
-深度工具#深度截图##需要自己添加快捷键才能使用
-#路径：系统设置=&gt;快捷键=&gt;添加应用程序
-1sudo pacman -S deepin-screenshot 
-
-#录屏软件，可以录制 Gif 或者 MP4 格式（与screenshot冲突）
-sudo pacman -S deepin-screen-recorder #还不会使用
-网页版QQ音乐或者网易云不推荐客户端
-网易云音乐
-yay -S netease-cloud-music
-google浏览器1yay -S google-chrome
-
-Typora#结合hexo搭建的博客一起使用很不错 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/21/manjaro%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BE%8E%E5%8C%96/" title="manjaro安装与美化">manjaro安装与美化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-21T08:48:12.000Z" title="发表于 2021-09-21 16:48:12">2021-09-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/manjaro/">manjaro</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/manjaro/">manjaro</a></span></div><div class="content">manjaro安装与美化，参考了很多文章，然后进行了一个综合，整理成一篇博客，保证下次重装系统时能够一步到位。
-
-
-桌面展示
-安装majaro前期准备
-  下载manjaro KDE镜像 官网链接
-
-  用rufus软件刻录启动盘下载链接
-
-  我选择的是低版本的 rufus-3.0p.exe 便携版本(可以选择GPT+UEF模式)
-
-
-怎么进入安装界面不多介绍，可自行百度
-分区方案我的电脑配置：16G内存、512G固态
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/favicon.ico" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 站点链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/navigate/"><i class="fa-fw fas fa-location-arrow"></i><span> 站点导航</span></a></div><div class="menus_item"><a class="site-page" href="/problems/"><i class="fa-fw fas fa-question"></i><span> 问题记录</span></a></div><div class="menus_item"><a class="site-page" href="/glance/"><i class="fa-fw fas fa-file"></i><span> 浏览记录</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/20211026535.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">探长的个人博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 站点链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/navigate/"><i class="fa-fw fas fa-location-arrow"></i><span> 站点导航</span></a></div><div class="menus_item"><a class="site-page" href="/problems/"><i class="fa-fw fas fa-question"></i><span> 问题记录</span></a></div><div class="menus_item"><a class="site-page" href="/glance/"><i class="fa-fw fas fa-file"></i><span> 浏览记录</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">探长的个人博客</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/19/linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/" title="linux各发行版基础信息">linux各发行版基础信息</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-19T14:46:18.000Z" title="发表于 2021-10-19 22:46:18">2021-10-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">manjarokali换镜像源传送门
+apt源配置文件 /etc/apt/sources.list
+12sudo apt-get cleansudo  apt-get autoclean
+更新
+1sudo apt-get update &amp;&amp; sudo apt-get upgrade &amp;&amp; sudo apt-get dist-upgrade
 
 
 
-目录
-大小
-文件系统
-标记
-挂载点
+
+
+ubuntu换源传送门
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/19/%E5%B7%A5%E5%85%B7%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/" title="工具常用命令记录">工具常用命令记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-19T14:08:04.000Z" title="发表于 2021-10-19 22:08:04">2021-10-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a></span></div><div class="content">docker常用命令
+123docker images	#查看镜像docker rmi 【IMAGE ID】 #删除image
+
+​    
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/18/%E6%9C%AA%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6/" title="未整理文件">未整理文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-18T14:09:29.000Z" title="发表于 2021-10-18 22:09:29">2021-10-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E6%95%B4%E7%90%86%E6%96%87%E4%BB%B6/">未整理文件</a></span></div><div class="content">office破解
+Office Tool Plus 工具传送门
+win7产品密钥：342DG-6YJR8-X92GV-V7DCV-P4K27
+chrome插件：Neat Reader看epub文件
+桌面壁纸网
+极简壁纸
+信息搜集
+渗透测试信息收集-CMS指纹识别
+markmap插件+vsc+md 画思维导图
+画流程图PlantUML，用户指南，网页端在线编辑
+linux发行版导航站
+linux内核存档
+p2p终结者
+DBeaver#数据库管理软件
+静态网页导航地址
+[待看]https://blog.csdn.net/cungudafa/article/details/106278206
+webstackhttps://www.iooiv.com/2157https://hub.fastgit.org/hui-ho/WebStack-Laravel
+全国DNS服务器查询
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/SSR%E9%85%8D%E7%BD%AE/" title="ShadowSocksR配置">ShadowSocksR配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:32:36.000Z" title="发表于 2021-10-14 17:32:36">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/">折腾日记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%AD%A3%E7%A1%AE%E4%B8%8A%E7%BD%91%E7%9A%84%E5%A7%BF%E5%8A%BF/">正确上网的姿势</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%87%AA%E7%94%B1%E7%9A%84%E4%B8%96%E7%95%8C/">自由的世界</a></span></div><div class="content">前言需要一台国外服务器，在服务器上安装SSR，进行如下配置
+fq软件VPN推荐
+视频教程地址，需要fq，可以先用fotiaoqiang软件翻出去
+出错地址合集
+服务器端使用root用户登录服务器，下载脚本
+1wget --no-check-certificate https://raw.githubusercontent.com/xiechangan123/shadowsocks_install/master/shadowsocks-all.sh
+
+给脚本赋予执行权限chmod +x shadowsocks-all.sh
+执行脚本./shadowsocks-all.sh
+建议配置：
+1234端口：443  #若443端口不可用，也可以选择其它未被占用的端口或默认模式加密：chacha20协议：auth_sha1_v4混淆：http_simple
+
+配置文件/etc/shadowsocks-r/config.json
+几个命令
+123/etc/init.d/shadowsocks-r start #启动/etc/init.d/shadowsocks-r stop #停止/etc/init ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/ShadowSocksR%E9%85%8D%E7%BD%AE/" title="ShadowSocksR配置">ShadowSocksR配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:32:36.000Z" title="发表于 2021-10-14 17:32:36">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/">折腾日记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%87%AA%E7%94%B1%E9%A3%9E%E7%BF%94/">自由飞翔</a></span></div><div class="content">前言需要一台境外服务器，在服务器上安装ShadowSocksR，进行科学上网
+翻墙软件VPN推荐
+视频教程地址，需要翻墙，可以先用fotiaoqiang软件翻出去
+出错地址合集
+服务器端使用root用户登录服务器，下载脚本
+1wget --no-check-certificate https://raw.githubusercontent.com/xiechangan123/shadowsocks_install/master/shadowsocks-all.sh
+
+给脚本赋予执行权限chmod +x shadowsocks-all.sh
+执行脚本./shadowsocks-all.sh
+建议配置：
+1234端口：443  #若443端口不可用，也可以选择其它未被占用的端口或默认模式加密：chacha20协议：auth_sha1_v4混淆：http_simple
+
+配置文件/etc/shadowsocks-r/config.json
+几个命令
+123/etc/init.d/shadowsocks-r start #启动/etc/init.d/shadowsocks-r stop #停止 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/linux%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/" title="manjaro自带软件">manjaro自带软件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:27:48.000Z" title="发表于 2021-10-14 17:27:48">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/manjaro/">manjaro</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/manjaro/">manjaro</a></span></div><div class="content">系统安装后需要的一些基础软件
+
+  filelight  磁盘分析
+  timeshift 备份系统软件
+  VLC 媒体播放器 
+  Gwenview 图片查看器
+  thunderbird 邮件客户端
+  okular PDF查看器
+  qBittorrent 种子下载器
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/manjaro%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" title="manjaro包管理器">manjaro包管理器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:24:32.000Z" title="发表于 2021-10-14 17:24:32">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/manjaro/">manjaro</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/manjaro/">manjaro</a></span></div><div class="content">前言
+manjaro包管理器pacman和yay的简单使用
+
+
+pacman#安装包
+1pacman -S 软件包
+
+#卸载包
+1pacman -Rs 软件包
+
+#升级系统
+1pacman -Syyu	#升级整个系统，y 是更新数据库，yy 是强制更新，u 是升级软件
 
 
 
-boot
-512M
-FAT32
-boot
-boot/efi
+yay#安装包
+1yay -S 软件包
+
+#卸载包
+1yay -Rns 软件包
+
+#升级系统
+1yay -Syyu	#升级整个系统，y 是更新数据库，yy 是强制更新，u 是升级软件
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/linux%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" title="linux命令使用示例">linux命令使用示例</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:14:25.000Z" title="发表于 2021-10-14 17:14:25">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/%E4%BD%BF%E7%94%A8/">使用</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux%E5%91%BD%E4%BB%A4/">linux命令</a></span></div><div class="content">前言
+在使用过程中，对一些不怎么经常用，但比较有用的一些命令，进行记录，给出使用示例
 
 
-swap
-16G
-linuxswap
-swap
+ssh#ssh-keygen
+##生成密钥
+1ssh-keygen -t rsa -f test -C &quot;test key&quot;
+
+##-t指定加密方式 -f指定文件名  -C 备注
+##会在当前目录下生成两个文件，一个公钥，一个私钥
+#ssh-copy-id
+##将指定公钥上传服务器
+##格式ssh-copy-id 文件 服务器
+##示例
+1ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.56.11
+
+##需要注意的是，你需要在要登陆的帐号环境下上传公要钥
+如root登陆
+123我需要现在客户端登陆root帐号##然后生成密钥##ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.56.11  ##@前面可以加root，不加默认当前user
 
 
 
-/
-128G
-ext4
-
-/
-
-
-/home
-剩下的全部
-ext4
-
-/home
+scp#上传文件到服务器
+##格式scp 文件 服务器ip:路径
+##示例
+1scp /root/readme.txt 192.168.1.1:/hom ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/14/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/" title="常见问题整理">常见问题整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-14T09:08:24.000Z" title="发表于 2021-10-14 17:08:24">2021-10-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%97%AE%E9%A2%98%E9%9B%86/">问题集</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/F-Q/">F&amp;Q</a></span></div><div class="content">对遇到的一些问题，给出了一些解决方案，然后将它们整理到了一起
 
 
-因为装的软件的配置文件一般都保存在/home目录下，所以home目录的空间耗费的快很多，需要把大部分的空间给/home目录；之前我给根目录/200G,发现根本用不完。
-一、基础配置 安装完成之后重启进入系统
-1. pacman仓库换源#选择最快的一个
-1sudo pacman-mirrors -i -c China -m ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/20/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="hexo搭建个人博客">hexo搭建个人博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-20T14:11:25.000Z" title="发表于 2021-09-20 22:11:25">2021-09-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/">折腾日记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%8A%98%E8%85%BE/">折腾</a></span></div><div class="content">想自己搭建博客，但又不想买服务器，亦或是不满意第三方的博客平台。因而可以利用hexo博客框架+github仓库 搭建免费的博客。
+1 python将自定义模块加入搜索路径1新建一个.pth文件，将模块路径写入这个文件，然后将这个文件加入到python已有的搜索路径中去
+2 系统环境变量的设置
+系统环境配置文件/etc/profile
+用户环境变量~/.bash_profile
 
 
-W3C介绍及搭建
-准备工作manjaro环境下搭建
-需要下列程序
+  https://cloud.tencent.com/developer/article/1372009?from=14588
+  https://www.linuxidc.com/Linux/2011-03/33197.htm
 
-Node.js
-Git （manjaro下自带）
+3 文件默认打开方式设置4 github访问慢：弄完还是很慢！！！
+解决办法：修改hosts文件，不进行DNS域名解析，直接手动将域名指向IP
+打开 https://www.ipaddress.com/ 查询以下四个域名的IP地址，获取GitHub官方CDN地址
 
-先安装npm
-1yay -S npm
-n模块是用来管理nodejs的
-1sudo npm install -g n
+  github.com
 
-安装nodejs v12
-1sudo n v12
+  assets-cdn.github.com
 
-安装hexo#选择一个安装目录，在该目录下执行下面的指令
-1npm install  hexo
+  github.global.ssl.fastly.net
 
-修改一个配置文件node_modules/hexo-cli/lib/console/init.js把第12行改为const GIT_REPO_URL = &#39;https://hub.fastgit.org/hexojs/hexo-starter.git&#39;;
-在hexo目录下初始化一个工作目录” blog “，作为博客根目录
-1hexo init blog
+  codeload.github.c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/28/vim%E7%BB%83%E4%B9%A0/" title="vim练习">vim练习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-28T09:49:24.000Z" title="发表于 2021-09-28 17:49:24">2021-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/linux/%E9%B8%9F%E5%93%A5%E7%9A%84linux%E7%AC%94%E8%AE%B0/">鸟哥的linux笔记</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/vim/">vim</a></span></div><div class="content">基础pacvim游戏
+9.2.2 按键说明除了上面简易范例的 i, [Esc], :wq 之外，其实 vi 还有非常多的按键可以使用喔！在介绍之前还是要再次强调， vi 的三种模式只有一般指令模式可以与编辑、命令行界面切换，编辑模式与命令行界面之间并不能切换的！ 这点在图9.2.1里面有介绍到，注意去看看喔！下面就来谈谈 vi 软件中会用到的按键功能吧！
 
-进入该目录
-1cd blog
+  第一部份：一般指令模式可用的按钮说明，光标移动、复制贴上、搜寻取代等
 
-执行下面的命名后才能用：hexo s、hexo g、hexo d这三个命 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.ico" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">bro探长</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lytanz"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不卑不亢</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/10/25/%E7%94%9F%E5%83%BB%E5%AD%97/" title="生僻字"><img src="https://s3.bmp.ovh/imgs/2021/10/0d29c9aa15e07547.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生僻字"/></a><div class="content"><a class="title" href="/2021/10/25/%E7%94%9F%E5%83%BB%E5%AD%97/" title="生僻字">生僻字</a><time datetime="2021-10-25T05:20:14.000Z" title="发表于 2021-10-25 13:20:14">2021-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/25/IT%E5%8D%95%E8%AF%8D/" title="IT单词"><img src="https://s3.bmp.ovh/imgs/2021/10/9e2021fc5372cb9c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IT单词"/></a><div class="content"><a class="title" href="/2021/10/25/IT%E5%8D%95%E8%AF%8D/" title="IT单词">IT单词</a><time datetime="2021-10-25T05:17:51.000Z" title="发表于 2021-10-25 13:17:51">2021-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/linux%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/" title="linux文件目录"><img src="https://s3.bmp.ovh/imgs/2021/10/91849e703ef4d64d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux文件目录"/></a><div class="content"><a class="title" href="/2021/10/24/linux%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/" title="linux文件目录">linux文件目录</a><time datetime="2021-10-24T02:40:39.000Z" title="发表于 2021-10-24 10:40:39">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/24/sec%E7%AC%94%E8%AE%B0/" title="sec笔记"><img src="https://s3.bmp.ovh/imgs/2021/10/91849e703ef4d64d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sec笔记"/></a><div class="content"><a class="title" href="/2021/10/24/sec%E7%AC%94%E8%AE%B0/" title="sec笔记">sec笔记</a><time datetime="2021-10-23T16:03:04.000Z" title="发表于 2021-10-24 00:03:04">2021-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/22/%E9%B8%9F%E5%93%A5%E7%9A%84linux-%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86/" title="鸟哥的linux(第五部分)"><img src="https://s3.bmp.ovh/imgs/2021/10/91849e703ef4d64d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鸟哥的linux(第五部分)"/></a><div class="content"><a class="title" href="/2021/10/22/%E9%B8%9F%E5%93%A5%E7%9A%84linux-%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86/" title="鸟哥的linux(第五部分)">鸟哥的linux(第五部分)</a><time datetime="2021-10-22T12:52:48.000Z" title="发表于 2021-10-22 20:52:48">2021-10-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+
+
+
+移动光标的方法
+
+
+
+
+h 或 向左方向键（←）
+光标向左移动一个字符
+
+
+j 或 向下方向键（↓）
+光标向下移动一个字符
+
+
+k 或 向上方向键（↑）
+光标向上移动一个字符
+
+
+l 或 向右方向键（→）
+光标向右移动一个字符
+
+
+如果你将右手放在键盘上的话，你会发现 hjkl 是排列在一起的，因此可以使用这四个按钮来移动光标。 如果想要进行多次移动的话，例如向下移动 30 列，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数（数字）后，按下动作即可！
+
+
+
+[Ctrl] + [f]
+屏幕“向下”移动一页，相当于 [Page  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/favicon.ico" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">bro探长</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lytanz"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不卑不亢</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C语言学习笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s3.bmp.ovh/imgs/2021/10/9e2021fc5372cb9c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言学习笔记"/></a><div class="content"><a class="title" href="/2021/11/06/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C语言学习笔记">C语言学习笔记</a><time datetime="2021-11-06T09:54:29.000Z" title="发表于 2021-11-06 17:54:29">2021-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/06/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="python学习笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s3.bmp.ovh/imgs/2021/10/9e2021fc5372cb9c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python学习笔记"/></a><div class="content"><a class="title" href="/2021/11/06/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="python学习笔记">python学习笔记</a><time datetime="2021-11-06T09:54:16.000Z" title="发表于 2021-11-06 17:54:16">2021-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/06/%E8%B5%84%E6%BA%90%E6%94%B6%E9%9B%86%E5%88%97%E8%A1%A8/" title="资源收集列表"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s3.bmp.ovh/imgs/2021/10/0d29c9aa15e07547.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="资源收集列表"/></a><div class="content"><a class="title" href="/2021/11/06/%E8%B5%84%E6%BA%90%E6%94%B6%E9%9B%86%E5%88%97%E8%A1%A8/" title="资源收集列表">资源收集列表</a><time datetime="2021-11-06T09:13:51.000Z" title="发表于 2021-11-06 17:13:51">2021-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="计算机硬件相关知识"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://s3.bmp.ovh/imgs/2021/10/0d29c9aa15e07547.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机硬件相关知识"/></a><div class="content"><a class="title" href="/2021/11/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="计算机硬件相关知识">计算机硬件相关知识</a><time datetime="2021-11-04T10:05:45.000Z" title="发表于 2021-11-04 18:05:45">2021-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/28/WebStack%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA%E8%87%AA%E5%AE%9A%E4%B9%89/" title="WebStack网址导航自定义"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/lytanz/blogimage/raw/master/hexo/webstackinterface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WebStack网址导航自定义"/></a><div class="content"><a class="title" href="/2021/10/28/WebStack%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA%E8%87%AA%E5%AE%9A%E4%B9%89/" title="WebStack网址导航自定义">WebStack网址导航自定义</a><time datetime="2021-10-28T11:55:44.000Z" title="发表于 2021-10-28 19:55:44">2021-10-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
     <i class="fas fa-angle-right"></i></a>
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">16</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/manjaro/"><span class="card-category-list-name">manjaro</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/%E6%9C%AA%E5%88%86%E7%B1%BB/"><span class="card-category-list-name">未分类</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/%E9%B8%9F%E5%93%A5%E7%9A%84linux%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">鸟哥的linux笔记</span><span class="card-category-list-count">8</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%88%E9%9B%86/"><span class="card-category-list-name">合集</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"><span class="card-category-list-name">工具使用</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">折腾日记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"><span class="card-category-list-name">未分类</span><span class="card-category-list-count">2</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/F-Q/" style="font-size: 1.1em; color: #999">F&Q</a> <a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/linux%E5%91%BD%E4%BB%A4/" style="font-size: 1.1em; color: #999">linux命令</a> <a href="/tags/manjaro/" style="font-size: 1.3em; color: #99a1ac">manjaro</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a> <a href="/tags/%E5%8D%95%E8%AF%8D/" style="font-size: 1.1em; color: #999">单词</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 1.1em; color: #999">安全</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" style="font-size: 1.1em; color: #999">工具使用</a> <a href="/tags/%E6%8A%98%E8%85%BE/" style="font-size: 1.1em; color: #999">折腾</a> <a href="/tags/%E7%94%9F%E5%83%BB%E5%AD%97/" style="font-size: 1.1em; color: #999">生僻字</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.1em; color: #999">科学上网</a> <a href="/tags/%E8%87%AA%E7%94%B1%E9%A3%9E%E7%BF%94/" style="font-size: 1.1em; color: #999">自由飞翔</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 1.1em; color: #999">资源</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">17</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">25</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-09-25T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-10-26T15:53:21.800Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/20211026535.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 By bro探长</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">21</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/manjaro/"><span class="card-category-list-name">manjaro</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/%E4%BD%BF%E7%94%A8/"><span class="card-category-list-name">使用</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/%E6%9C%AA%E5%88%86%E7%B1%BB/"><span class="card-category-list-name">未分类</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/%E9%B8%9F%E5%93%A5%E7%9A%84linux%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">鸟哥的linux笔记</span><span class="card-category-list-count">13</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%88%E9%9B%86/"><span class="card-category-list-name">合集</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"><span class="card-category-list-name">工具使用</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">折腾日记</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.1em; color: #999">C语言</a> <a href="/tags/F-Q/" style="font-size: 1.1em; color: #999">F&Q</a> <a href="/tags/WebStack%E7%AB%99%E7%82%B9%E5%AF%BC%E8%88%AA/" style="font-size: 1.1em; color: #999">WebStack站点导航</a> <a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/linux%E5%91%BD%E4%BB%A4/" style="font-size: 1.1em; color: #999">linux命令</a> <a href="/tags/manjaro/" style="font-size: 1.4em; color: #99a5b6">manjaro</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a> <a href="/tags/%E5%8D%95%E8%AF%8D/" style="font-size: 1.1em; color: #999">单词</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 1.1em; color: #999">安全</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" style="font-size: 1.1em; color: #999">工具使用</a> <a href="/tags/%E6%8A%98%E8%85%BE/" style="font-size: 1.1em; color: #999">折腾</a> <a href="/tags/%E6%AD%A3%E7%A1%AE%E4%B8%8A%E7%BD%91%E7%9A%84%E5%A7%BF%E5%8A%BF/" style="font-size: 1.1em; color: #999">正确上网的姿势</a> <a href="/tags/%E7%94%9F%E5%83%BB%E5%AD%97/" style="font-size: 1.1em; color: #999">生僻字</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 1.1em; color: #999">硬件</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 1.1em; color: #999">科学上网</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">笔记</a> <a href="/tags/%E8%87%AA%E7%94%B1%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 1.1em; color: #999">自由的世界</a> <a href="/tags/%E8%87%AA%E7%94%B1%E9%A3%9E%E7%BF%94/" style="font-size: 1.1em; color: #999">自由飞翔</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 1.2em; color: #999da3">资源</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">25</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-09-25T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-11-09T03:07:49.067Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/20211026535.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 By bro探长</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "分享知识，分享快乐！".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '分'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,工正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
